@@ -11,8 +11,4 @@ pipeline {
         git credentialsId: 'jenkins-user-for-xyz-artifact-repository', url: 'https://github.com/RahulPiddeCheckmarx/issue-vercel-npmrc', branch: 'main'
       }
     }
-    stage('Install Dependencies') {
-      steps {
-        sh 'npm install'
-      }
-    }}}
+    }}
