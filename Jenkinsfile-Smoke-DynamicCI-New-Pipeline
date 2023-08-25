@@ -13,6 +13,8 @@ environment{
         steps {
         sh 'npm install'
         }}
+	}
+
         stage('Checkmarx scan ') {
             steps {
             step([$class: 'CxScanBuilder', comment: 'argo-mountebank-sit', configAsCode: true, credentialsId: 'checkmarx credentails', customFields: '', 
@@ -44,6 +46,5 @@ vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
                 sh 'exit 1'
             }
     }}
-	}
 }
-}
+
