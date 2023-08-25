@@ -1,8 +1,4 @@
 pipeline {
-  agent {
-    label 'argo-uat'
-  }
-
   environment {
     ARTIFACTORY_URL = credentials('MY_REGISTRY')
   }
