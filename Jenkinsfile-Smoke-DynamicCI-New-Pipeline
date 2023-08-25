@@ -1,4 +1,7 @@
 pipeline {
+
+  agent any
+
   environment {
     ARTIFACTORY_URL = credentials('MY_REGISTRY')
   }
