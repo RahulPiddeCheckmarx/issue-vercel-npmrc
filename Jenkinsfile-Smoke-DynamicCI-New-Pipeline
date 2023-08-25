@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Git checkout Codebase') {
       steps {
-        git credentialsId: 'jenkins-user-for-xyz-artifact-repository', url: 'https://github.com/RahulPiddeCheckmarx/issue-vercel-npmrc', branch: '*/master'
+        git credentialsId: 'jenkins-user-for-xyz-artifact-repository', url: 'https://github.com/RahulPiddeCheckmarx/issue-vercel-npmrc', branch: 'refs/heads/master'
       }
     }
     stage('Install Dependencies') {
