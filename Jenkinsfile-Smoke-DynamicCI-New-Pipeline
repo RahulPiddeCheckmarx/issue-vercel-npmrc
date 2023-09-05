@@ -30,4 +30,4 @@ step([$class: 'CxScanBuilder', comment: '', configAsCode: true, credentialsId: '
         !**/*.bin,!**/*.lock,!**/*.svg,!**/*.obj,
         !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml, !Checkmarx/Reports/*.*,
         !OSADependencies.json, !**/node_modules/**/*, !**/.cxsca-results.json, !**/.cxsca-sast-results.json, !.checkmarx/cx.config''', fullScanCycle: 10, groupId: '1', password: '{AQAAABAAAAAQg1Cm0sTC3kfQBoIkm52oMDOafPdpvLvWiBWYmg61mGI=}', preset: '0', projectName: 'argo-uat1', sastEnabled: true, scaReportFormat: 'PDF', serverUrl: 'http://10.33.0.16:80/', sourceEncoding: '1', username: '', vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
-    }}
+    }}}}
