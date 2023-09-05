@@ -13,7 +13,7 @@ pipeline {
     }
 stage('Install Dependencies') {
       steps {
-	echo 'npm_config_registry : ${ARTIFACTORY_URL}'
+	echo 'npm_config_registry :' + ${ARTIFACTORY_URL}
         bat "npm install"
       }
     }
