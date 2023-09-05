@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   environment {
-    ARTIFACTORY_URL = 'https://registry.npmjs.org/'
+    ARTIFACTORY_URL = 'https://www.npmjs.com/'
   }
   stages {
     stage('Git checkout Codebase') {
