@@ -13,9 +13,7 @@ pipeline {
     }
 stage('Install Dependencies') {
       steps {
-	echo "MY_REGISTRY ${MY_REGISTRY}"
-	echo "npm_config_registry is ${npm_config_registry}"
-        bat "npm install ${npm_config_registry}"
+        bat "npm install"
       }
     }
 stage('Checkmarx scan ') {
