@@ -13,7 +13,7 @@ pipeline {
     }
 stage('Install Dependencies') {
       steps {
-        bat "npm install ${ARTIFACTORY_URL}"
+        bat "npm install ${npm_config_registry}"
       }
     }
 stage('Checkmarx scan ') {
