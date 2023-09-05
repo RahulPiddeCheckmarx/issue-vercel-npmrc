@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   environment {
-    ARTIFACTORY_URL = ${MY_REGISTRY}
+    ARTIFACTORY_URL = "${MY_REGISTRY}"
   }
   stages {
     stage('Git checkout Codebase') {
