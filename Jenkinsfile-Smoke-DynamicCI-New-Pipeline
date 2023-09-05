@@ -16,10 +16,7 @@ stage('Install Dependencies') {
         bat 'npm install ${ARTIFACTORY_URL}'
       }
     }
-withEnvironment {
-
-ARTIFACTORY_CREDENTIALS="${npm_config_registry}"
-	stage('Checkmarx scan ') {
+stage('Checkmarx scan ') {
             steps {
            step([$class: 'CxScanBuilder', comment: '', configAsCode: true, credentialsId: '', customFields: '', dependencyScanConfig: [dependencyScanExcludeFolders: 'node_modules, target, test', dependencyScanPatterns: '', dependencyScannerType: 'OSA', enableScaResolver: 'MANIFEST', fsaVariables: '', osaArchiveIncludePatterns: '*.zip, *.war, *.ear, *.tgz', osaInstallBeforeScan: true, overrideGlobalConfig: true, pathToScaResolver: '', sastCredentialsId: '', scaAccessControlUrl: 'https://platform.checkmarx.net', scaConfigFile: '', scaCredentialsId: '', scaEnvVariables: '', scaResolverAddParameters: '', scaSASTProjectFullPath: '', scaSASTProjectID: '', scaSastServerUrl: '', scaServerUrl: 'https://api-sca.checkmarx.net', scaTeamPath: '', scaTenant: '', scaWebAppUrl: 'https://sca.checkmarx.net'], excludeFolders: '', exclusionsSetting: 'global', failBuildOnNewResults: false, failBuildOnNewSeverity: 'HIGH', filterPattern: '''!**/_cvs/**/*, !**/.svn/**/*, !**/.hg/**/*, !**/.git/**/*, !**/.bzr/**/*,
         !**/.gitgnore/**/*, !**/.gradle/**/*, !**/.checkstyle/**/*, !**/.classpath/**/*, !**/bin/**/*,
@@ -36,6 +33,5 @@ ARTIFACTORY_CREDENTIALS="${npm_config_registry}"
         !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml, !Checkmarx/Reports/*.*,
         !OSADependencies.json, !**/node_modules/**/*, !**/.cxsca-results.json, !**/.cxsca-sast-results.json, !.checkmarx/cx.config''', fullScanCycle: 10, groupId: '1', password: '{AQAAABAAAAAQg1Cm0sTC3kfQBoIkm52oMDOafPdpvLvWiBWYmg61mGI=}', preset: '0', projectName: 'argo-uat1', sastEnabled: true, scaReportFormat: 'PDF', serverUrl: 'http://10.33.0.16:80/', sourceEncoding: '1', username: '', vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
            }
-	}   
-} 
+	}  
 }}
