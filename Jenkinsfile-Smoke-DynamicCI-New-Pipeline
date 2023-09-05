@@ -36,8 +36,8 @@ filterPattern: '''!**/*.tpl,    !**/_cvs/**/*, !**/.svn/**/*,   !**/.hg/**/*,   
 !**/*.hdml,    !**/*.hsql,      !**/*.ht,       !**/*.hta,      !**/*.htc,     !**/*.htd, !**/*.war, !**/*.ear,
 !**/*.htmls,   !**/*.ihtml,     !**/*.mht,      !**/*.mhtm,     !**/*.mhtml,   !**/*.ssi, !**/*.stm,
 !**/*.stml,    !**/*.ttml,      !**/*.txn,      !**/*.xhtm,     !**/*.xhtml,   !**/*.class, !**/*.iml, !Checkmarx/Reports/*.*''', 
-incremental: true, generatePdfReport: true, groupId: '19', hideDebugLogs: true, incremental: true, 
-password: '{AQAAABAAAAAQKM9N8lSNEeutZaDzCDykXlOxclHTCLRLORUbfGZ/ckQ=}', preset: '36', projectName: 'argo-uat', sastEnabled: true, 
+incremental: true, generatePdfReport: true, groupId: '19', hideDebugLogs: true, incremental: false, 
+password: '', preset: '36', projectName: 'argo-uat', sastEnabled: true, 
 serverUrl: 'http://10.33.0.16:80', sourceEncoding: '6', useOwnServerCredentials: true, username: '', 
 vulnerabilityThresholdResult: 'FAILURE', waitForResultsEnabled: true])
 
