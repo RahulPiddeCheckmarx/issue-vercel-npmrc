@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   environment {
-    ARTIFACTORY_URL = 'http://registry.npmjs.org'
+    ARTIFACTORY_URL = 'true'
   }
   stages {
     stage('Git checkout Codebase') {
@@ -13,7 +13,7 @@ pipeline {
     }
 stage('Install Dependencies') {
       steps {
-	echo ${ARTIFACTORY_URL}
+	echo '${ARTIFACTORY_URL}'
         bat "npm install"
       }
     }
