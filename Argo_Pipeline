@@ -1,1 +1,18 @@
-npm_config_registry=http://registry.npmjs.org
+pipeline {
+
+  agent any
+
+  environment {
+  }
+  stages {
+    stage('Git checkout Codebase') {
+      steps {
+        git credentialsId: 'jenkins-user-for-xyz-artifact-repository', url: 'https://github.com/RahulPiddeCheckmarx/issue-vercel-npmrc', branch: 'main'
+      }
+    }
+stage('Install Dependencies') {
+      steps {
+        bat "npm install"
+      }
+    } 
+}}
