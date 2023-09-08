@@ -3,7 +3,6 @@ pipeline {
   agent any
 
   environment {
-    echo "${npm_config_registry}"
     ARTIFACTORY_URL = "${npm_config_registry}"
   }
   stages {
